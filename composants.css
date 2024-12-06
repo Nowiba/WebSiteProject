@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 5px;
+}
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    position: relative; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+    background-color: purple;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 3px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-bottom: 1px solid #f4f4f4; 
+    padding-bottom: 10px;
+}
+
+.product-name {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+
+.product-price1 {
+    font-size: 20px;
+    color: rgb(177, 0, 177);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+    }
+
+    .product-card {
+        padding: 8px; 
+    }
+
+    .product-price1 {
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 2fr; 
+    }
+
+    .title {
+        font-size: 20px; 
+    }
+}
+
+
+
+
+
+
+
+
+.command-btn {
+    background-color: #000000;
+    color: white;
+    padding: 12px 20px; 
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px; 
+    margin: 10px 130px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.command-btn:hover {
+    background-color: #000000; 
+}
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    overflow-x: hidden; 
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 35px; 
+    height: 30px; 
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.hamburger-menu .line {
+    width: 35px;  
+    height: 5px;  
+    background-color: #333; 
+    border-radius: 5px; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; 
+    width: 250px; 
+    height: 100%;
+    background-color: #343a40;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 60px; 
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+.slide-menu.open {
+    left: 0; 
+}
+
+.menu-btn {
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    text-decoration: none; 
+    transition: background-color 0.3s ease, padding-left 0.2s ease;
+    border: none;
+    background-color: transparent; 
+    cursor: pointer;
+    border-bottom: 1px solid #495057; 
+}
+
+.menu-btn:hover {
+    background-color: #007bff; 
+    padding-left: 30px; 
+}
+
+.cancel-btn {
+    background: none;
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cancel-btn:hover {
+    transform: rotate(90deg); 
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.hamburger-menu .line:hover {
+    background-color: #007bff; 
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+html {
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPOSANTS - Mega Tech</title>
+    <link rel="stylesheet" href="composants.css">
+</head>
+<body>
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        
+            <div class="slide-menu" id="slide-menu">
+                <button class="cancel-btn" id="cancel-btn">X</button>
+        
+                <a href="ordinateur.html" class="menu-btn"><i>Ordinateur</i></a>
+                <a href="laptop.html" class="menu-btn"><i>Laptop</i></a>
+                <a href="ecran.html" class="menu-btn"><i>Ecrans</i></a>
+                <a href="composants.html" class="menu-btn"><i>Composants</i></a>
+            </div>
+        
+            <script>
+                document.getElementById('hamburger-menu').addEventListener('click', function() {
+                    document.getElementById('slide-menu').classList.toggle('open');
+                });
+        
+                document.getElementById('cancel-btn').addEventListener('click', function() {
+                    document.getElementById('slide-menu').classList.remove('open');
+                });
+            </script>
+        
+        
+        
+    <div class="container">
+        <h1 class="title">Mega Tech</h1>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" onclick="window.location.href='outservice.html'">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fsouscateg%2F1620205621502.webp&w=750&q=75" alt="Processeur" class="product-image">
+                <h2 class="product-name"> Processeur </h2>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card" onclick="window.location.href='outservice.html'">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fsouscateg%2F1620205640224.webp&w=750&q=75" alt="Carte Mère" class="product-image">
+                <h2 class="product-name">Carte Mère </h2>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card" onclick="window.location.href='outservice.html'">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fsouscateg%2F1620205649078.webp&w=750&q=75" alt="Barette Memoire" class="product-image">
+                <h2 class="product-name"> Barette Memoire </h2>
+            </div>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 4 -->
+            <div class="product-card" onclick="window.location.href='outservice.html'">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fsouscateg%2F1620205659932.webp&w=750&q=75" alt="Carte Graphique" class="product-image">
+                <h2 class="product-name">Carte Graphique </h2>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card" onclick="window.location.href='outservice.html'">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fsouscateg%2F1620205726337.webp&w=750&q=75" alt="Alimentation" class="product-image">
+                <h2 class="product-name">Alimentation</h2>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card" onclick="window.location.href='outservice.html'">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fsouscateg%2F1639735720230.webp&w=750&q=75" alt="Stockage" class="product-image">
+                <h2 class="product-name">Stockage</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

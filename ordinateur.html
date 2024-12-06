@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordinateur - Mega Tech</title>
+    <link rel="stylesheet" href="ordinateur.css">
+</head>
+<body>
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    
+        <div class="slide-menu" id="slide-menu">
+            <button class="cancel-btn" id="cancel-btn">X</button>
+    
+            <a href="ordinateur.html" class="menu-btn"><i>Ordinateur</i></a>
+            <a href="laptop.html" class="menu-btn"><i>Laptop</i></a>
+            <a href="ecran.html" class="menu-btn"><i>Ecrans</i></a>
+            <a href="composants.html" class="menu-btn"><i>Composants</i></a>
+        </div>
+    
+        <script>
+            document.getElementById('hamburger-menu').addEventListener('click', function() {
+                document.getElementById('slide-menu').classList.toggle('open');
+            });
+    
+            document.getElementById('cancel-btn').addEventListener('click', function() {
+                document.getElementById('slide-menu').classList.remove('open');
+            });
+        </script>
+    
+    
+    
+
+
+
+
+    <div class="container">
+        <h1 class="title">Mega Tech</h1>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" onclick="showProductDetails('LOKI 1', 'Ryzen 5 4600', 'Vega 7', '8 GB', '256 GB SSD','MSI A520M-A PRO', '709 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1732961894226.webp&w=640&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">LOKI 1 | Ryzen 5 4600 | Vega 7 | 8 GB | 256 GB SSD </h2>
+                <p class="product-price1">709 DT</p>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card" onclick="showProductDetails('VOID Z2', 'Ryzen 7 4600G', 'Vega 7', '16 GB RAM', '256 GB SSD','MSI A520M-A PRO', '769 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1732811300738.webp&w=640&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">VOID Z2 | Ryzen 7 4600G | Vega 7 | 16 GB RAM | 256 GB SSD</h2>
+                <p class="product-price1">769 DT</p>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card" onclick="showProductDetails('VOID Z3', 'Ryzen 7 5600G', 'Vega 7', '16 GB RAM', '512 GB SSD','MSI A520M-A PRO', '989 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1732812594015.webp&w=1920&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">VOID Z3 | Ryzen 7 5600G | Vega 7 | 16 GB RAM | 512 GB SSD</h2>
+                <p class="product-price1">989 DT</p>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card" onclick="showProductDetails('CUSTOM BUILD Project Zero White', 'Intel', 'N/A', 'N/A', 'N/A','N/A', '1028 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1732790726094.webp&w=1920&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">CUSTOM BUILD Project Zero White | Intel</h2>
+                <p class="product-price1">1028 DT</p>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card" onclick="showProductDetails('Void X1', 'Intel I3-10105F', 'RTX 3050', '16GB RAM', '512GB SSD NVMe','MSI PRO A620M-E DDR5','1419 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1719483875909.webp&w=1920&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">Void X1 | Intel I3-10105F | RTX 3050 | 16GB RAM | 512GB SSD NVMe</h2>
+                <p class="product-price1">1419 DT</p>
+            </div>
+            <!-- Product 6-->
+            <div class="product-card" onclick="showProductDetails('BLUE GIANT', 'Intel Core i5-12400F', 'RTX 4060', '16GB', '512 NVMe','Z890 AORUS XTREME AI TOP', '2119 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1730373215185.webp&w=640&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">BLUE GIANT | Intel Core i5-12400F | RTX 4060 | 16GB | 512 NVMe</h2>
+                <p class="product-price1">2119 DT</p>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-card" onclick="showProductDetails('BLOODMOON V4', 'Intel Core i5-12400F', 'RTX 4060 Ti', '16GB RAM', '1TB','Z890 AORUS ELITE X ICE', '2539 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1732547149103.webp&w=640&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">BLOODMOON V4 | Intel Core i5-12400F | RTX 4060 Ti | 16GB RAM | 1TB</h2>
+                <p class="product-price1">2539 DT</p>
+            </div>
+            <!-- Product 8-->
+            <div class="product-card" onclick="showProductDetails('PsyOps X2', 'Intel Core i3-12100F', 'RTX 4060', '32GB RAM', '500GB NVMe','Z890 GAMING X WIFI7', '2699 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1727865837507.webp&w=640&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">PsyOps X2 | Intel Core i3-12100F | RTX 4060 | 32GB RAM | 500GB NVMe</h2>
+                <p class="product-price1">2699 DT</p>
+            </div>
+            <!-- Product 9 -->
+            <div class="product-card" onclick="showProductDetails('Zaddem 3', 'Intel Core i5-12400F', 'RTX 4060 Ti', '16GB RAM', '512GB NVMe','Z890I AORUS ULTRA', '2999 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1729179285646.webp&w=640&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">Zaddem 3 | Intel Core i5-12400F | RTX 4060 Ti | 16GB RAM | 512GB NVMe</h2>
+                <p class="product-price1">2699 DT</p>
+            </div>
+            <!-- Product 10-->
+            <div class="product-card" onclick="showProductDetails('BLOODMOON V7', 'Intel Core i7-12700F', 'RTX 4060 TI', '16GB', '32GB RAM', '500GB NVMe','X870E AORUS MASTER', '3599 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1732621176236.webp&w=640&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">BLOODMOON V7 | Intel Core i7-12700F | RTX 4060 Ti | 16GB RAM | 500GB NVMe</h2>
+                <p class="product-price1">3599 DT</p>
+            </div>
+            <!-- Product 11 -->
+            <div class="product-card" onclick="showProductDetails('TEAM RED 🔴 ', 'Intel Core i7-13700F', 'RTX 4070', '32GB RAM', '1TB NVMe','Z890I AORUS ULTRA', '3899 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1731429671101.webp&w=1920&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">TEAM RED 🔴 | RYZEN 77700X | RTX 4060 TI | 32GB 5200MHz | 1TB SSD NVMe
+                </h2>
+                <p class="product-price1">4190 DT</p>
+            </div>
+            <!-- Product 12-->
+            <div class="product-card" onclick="showProductDetails('Zaddem 4', 'Intel Core i7-13700F', 'RTX 4080', '64GB RAM', '2TB NVMe','X870E AORUS MASTER', '8999 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1726650029980.webp&w=640&q=75" alt="Mega Tech PC" class="product-image">
+                <h2 class="product-name">Zaddem 4 | Intel Core i7-13700F | RTX 4080 | 64GB RAM | 2TB NVMe</h2>
+                <p class="product-price1">8999 DT</p>
+            </div>
+        </div>
+                <div id="product-detail" class="product-detail" style="display: none;">
+                    <button class="close-btn" onclick="closeProductDetails()"><i>X</i></button>
+                    <h2 id="product-title"></h2>
+                    <p id="product-specs"></p>
+                    <p id="product-price"></p>
+
+            <button class="command-btn" onclick="orderProduct()"><i>Commander</i></button>
+
+   
+   
+   
+   <script> 
+function showProductDetails(name, cpu, gpu, ram, storage,motherboard, price) {
+    document.getElementById('product-title').textContent = name;
+   
+    document.getElementById('product-specs').textContent = `CPU: ${cpu}, GPU: ${gpu}, RAM: ${ram}, Storage: ${storage}`;
+    document.getElementById('product-specs').innerHTML = `
+                <p><strong>Processeur: :</strong> ${cpu}</p>
+                <p><strong>Carte Graphique:</strong> ${gpu}</p>
+                <p><strong>RAM:</strong> ${ram}</p>
+                <p><strong>Stockage:</strong> ${storage}</p>
+                <p><strong>Carte Mère:</strong> ${motherboard}</p> 
+                <p><strong>Prix:</strong> ${price}</p> 
+            `;
+            
+    document.getElementById('product-detail').style.display = 'block';
+}
+
+function orderProduct() {
+    const quantity = document.getElementById('quantity').value;
+    const address = document.getElementById('address').value;
+
+    if (quantity < 1) {
+        alert("Please select a valid quantity.");
+        return;
+    }
+    if (address.trim() === "") {
+        alert("Please enter your shipping address.");
+        return;
+    }
+
+    alert(`Order placed successfully!\nQuantity: ${quantity}\nShipping Address: ${address}`);
+}
+
+function closeProductDetails() {
+    document.getElementById('product-detail').style.display = 'none';
+}
+
+
+document.querySelectorAll('.command-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        window.location.href = 'identity.html';
+    });
+});
+
+    </script>
+</body>
+</html>
+

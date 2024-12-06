@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops - Mega Tech</title>
+    <link rel="stylesheet" href="laptop.css">
+</head>
+<body>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        
+            <div class="slide-menu" id="slide-menu">
+                <button class="cancel-btn" id="cancel-btn">X</button>
+        
+                <a href="ordinateur.html" class="menu-btn"><i>Ordinateur</i></a>
+                <a href="laptop.html" class="menu-btn"><i>Laptop</i></a>
+                <a href="ecran.html" class="menu-btn"><i>Ecrans</i></a>
+                <a href="composants.html" class="menu-btn"><i>Composants</i></a>
+            </div>
+        
+            <script>
+                document.getElementById('hamburger-menu').addEventListener('click', function() {
+                    document.getElementById('slide-menu').classList.toggle('open');
+                });
+        
+                document.getElementById('cancel-btn').addEventListener('click', function() {
+                    document.getElementById('slide-menu').classList.remove('open');
+                });
+            </script>
+        
+        
+        
+    <div class="container">
+        <h1 class="title">Mega Tech</h1>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" onclick="showProductDetails('LOKI 2', 'Intel Core i5-11400F', 'GTX 1660 Ti', '8 GB', '512 GB SSD', 'ASUS', '799 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1730804914659.jpg&w=1920&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Fire Up | Intel i5 | 8 GB RAM | 512 GB SSD</h2>
+                <p class="product-price1">799 DT</p>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card" onclick="showProductDetails('VOID X1 Pro', 'Intel Core i7-11700K', 'RTX 3070', '16 GB', '1 TB SSD', 'MSI', '1799 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1733151878089.webp&w=1920&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Naruto  | Intel i7 | 16 GB RAM | 1 TB SSD</h2>
+                <p class="product-price1">1799 DT</p>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card" onclick="showProductDetails('CUSTOM BUILD Apex Black', 'AMD Ryzen 7 5800X', 'RTX 3080', '32 GB', '1 TB SSD + 2 TB HDD', 'ROG', '2599 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1723894764342.webp&w=1920&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">CUSTOM BUILD Apex Black | Ryzen 7 | 32 GB RAM | 1 TB SSD + 2 TB HDD</h2>
+                <p class="product-price1">2599 DT</p>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card" onclick="showProductDetails('VOID X4', 'Intel Core i5-12600K', 'RTX 3070 Ti', '16 GB', '512 GB SSD', 'Gigabyte', '1799 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1718980451408.webp&w=1080&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Ragnarok | Intel i5 | 16 GB RAM | 512 GB SSD</h2>
+                <p class="product-price1">1799 DT</p>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card" onclick="showProductDetails('Apex Gaming Pro', 'Intel Core i9-11900K', 'RTX 3090', '64 GB', '2 TB SSD', 'Dell', '3799 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1726070642724.webp&w=1080&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Apex Gaming Pro | Intel i9 | 64 GB RAM | 2 TB SSD</h2>
+                <p class="product-price1">3799 DT</p>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card" onclick="showProductDetails('Zenith Ultra', 'AMD Ryzen 9 5900X', 'RTX 3080 Ti', '32 GB', '1 TB SSD', 'Asus', '2499 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1733243093118.png&w=1080&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Zenith Ultra | Ryzen 9 | 32 GB RAM | 1 TB SSD</h2>
+                <p class="product-price1">2499 DT</p>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-card" onclick="showProductDetails('Viper X', 'Intel Core i7-10700K', 'RTX 3060 Ti', '16 GB', '512 GB SSD', 'HP', '1499 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1718968795054.webp&w=1080&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Viper X | Intel i7 | 16 GB RAM | 512 GB SSD</h2>
+                <p class="product-price1">1499 DT</p>
+            </div>
+            <!-- Product 8 -->
+            <div class="product-card" onclick="showProductDetails('Phoenix Titan', 'Intel Core i5-12600K', 'RTX 3080', '32 GB', '1 TB SSD', 'Lenovo', '2099 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1709206692920.webp&w=1080&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Phoenix Titan | Intel i5 | 32 GB RAM | 1 TB SSD</h2>
+                <p class="product-price1">2099 DT</p>
+            </div>
+            <!-- Product 9 -->
+            <div class="product-card" onclick="showProductDetails('Nebula Quantum', 'AMD Ryzen 7 5700X', 'RTX 3070', '16 GB', '1 TB SSD', 'MSI', '1799 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1725895661758.webp&w=1080&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Nebula Quantum | Ryzen 7 | 16 GB RAM | 1 TB SSD</h2>
+                <p class="product-price1">1799 DT</p>
+            </div>
+            <!-- Product 10 -->
+            <div class="product-card" onclick="showProductDetails('Cyclone Pro', 'Intel Core i9-11900K', 'RTX 3090', '64 GB', '2 TB SSD', 'Gigabyte', '3999 DT')">
+                <div class="badge">New</div>
+                <img src="https://megapc.tn/_next/image?url=https%3A%2F%2Fstatic.gi-ga.tech%2F%2Fuploads%2Fgallerie%2F1716824830031.webp&w=1080&q=75" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Cyclone Pro | Intel i9 | 64 GB RAM | 2 TB SSD</h2>
+                <p class="product-price1">3999 DT</p>
+            </div>
+            <!-- Product 11 -->
+            <div class="product-card" onclick="showProductDetails('Titanium Edge', 'Intel Core i7-11800H', 'RTX 3060', '32 GB', '1 TB SSD', 'Razer', '2199 DT')">
+                <div class="badge">New</div>
+                <img src="https://m.media-amazon.com/images/I/71NOqxPYcXL._AC_UL320_.jpg" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Titanium Edge | Intel i7 | 32 GB RAM | 1 TB SSD</h2>
+                <p class="product-price1">2199 DT</p>
+            </div>
+            <!-- Product 12 -->
+            <div class="product-card" onclick="showProductDetails('Nebula Flex', 'AMD Ryzen 9 5900X', 'RTX 3080 Ti', '64 GB', '2 TB SSD', 'Asus', '3599 DT')">
+                <div class="badge">New</div>
+                <img src="https://m.media-amazon.com/images/I/711A30-vG5L._AC_UL320_.jpg" alt="Mega Tech Laptop" class="product-image">
+                <h2 class="product-name">Nebula Flex | Ryzen 9 | 64 GB RAM | 2 TB SSD</h2>
+                <p class="product-price1">3599 DT</p>
+            </div>
+        </div>
+
+        <div id="product-detail" class="product-detail" style="display: none;">
+            <button class="close-btn" onclick="closeProductDetails()"><i>X</i></button>
+            <h2 id="product-title"></h2>
+            <p id="product-specs"></p>
+            <p id="product-price"></p>
+            
+            <button class="command-btn" onclick="orderProduct()"><i>Commander</i></button>
+        </div>
+    </div>
+
+    <script> 
+        function showProductDetails(name, cpu, gpu, ram, storage, brand, price) {
+            document.getElementById('product-title').textContent = name;
+            document.getElementById('product-specs').innerHTML = ` 
+                <p><strong>Processeur:</strong> ${cpu}</p>
+                <p><strong>Carte Graphique:</strong> ${gpu}</p>
+                <p><strong>RAM:</strong> ${ram}</p>
+                <p><strong>Stockage:</strong> ${storage}</p>
+                <p><strong>Marque:</strong> ${brand}</p>
+            `;
+            document.getElementById('product-price').textContent = `Prix: ${price}`;
+            
+            document.getElementById('product-detail').style.display = 'block';
+        }
+const commandBtn = document.querySelector('.command-btn');
+
+commandBtn.addEventListener('click', function() {
+    window.location.href = 'identity.html';
+});
+
+        function closeProductDetails() {
+            document.getElementById('product-detail').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

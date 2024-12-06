@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        body {
+            user-select: none;
+        }
+
+        input, textarea, select {
+            user-select: text;
+        }
+
+        
+           
+    </style>
+</head>
+
+<body class="login-page">
+    <div class="container">
+        <div class="logo">
+            <img src="img1.jpg" alt="Logo">
+        </div>
+
+        <h2 id="login-title">Log In To Your Account</h2>
+
+        <form id="login-form">
+            <div class="form-group">
+                <input type="text" id="email" name="email" placeholder="Email or phone number" required>
+                <div id="email-warning" class="warning-message"></div>
+            </div>
+
+            <div class="form-group password-container">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button type="button" id="togglePassword">Show</button>
+                <div id="password-warning" class="warning-message"></div>
+            </div>
+
+            <button type="submit" class="dark-button" id="login-button">Log In</button>
+        </form>
+
+        <div id="login-error" class="warning-message" style="display: none;"></div>
+
+        <div class="button-group">
+            <a href="signup.html" id="create-account-button" class="dark-button">Create New Account</a>
+            <a href="forgetpass.html" id="forgot-password-button" class="dark-button">Forgot Password</a>
+        </div>
+
+       
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('copy', function (e) {
+            if (!e.target.closest('input, textarea, select')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+<script>
+
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const loginError = document.getElementById('login-error');
+    
+        loginError.style.display = 'none';
+    
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const user = users.find(user => user.email === email);
+    
+        if (user && user.password === password) {
+            window.location.href = 'mainpage.html'; 
+        } else {
+            loginError.innerText = 'Wrong email or password.';
+            loginError.style.display = 'block';
+        }
+    });
+    
+    document.getElementById('togglePassword').addEventListener('click', () => {
+        const passwordField = document.getElementById('password');
+        const toggleButton = document.getElementById('togglePassword');
+    
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            toggleButton.innerText = 'Hide';
+        } else {
+            passwordField.type = 'password';
+            toggleButton.innerText = 'Show';
+        }
+    });
+    </script>

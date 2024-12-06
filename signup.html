@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="signup.css"> 
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="logo">
+            <img src="img1.jpg" alt="Information Project Logo" class="circular-img">
+        </div>
+        <h1 id="create-title">Create New Account</h1>
+
+        <form id="register-form">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+
+            <div class="birthdate-section">
+                <input type="number" id="year" placeholder="YYYY" maxlength="4" required oninput="moveFocus('year', 'month')">
+                <input type="number" id="month" placeholder="MM" maxlength="2" required oninput="moveFocus('month', 'day')">
+                <input type="number" id="day" placeholder="DD" maxlength="2" required oninput="moveFocus('day', 'email')">
+            </div>
+
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+            <button type="submit" id="register-button" class="register-button">Register</button>
+
+            <div id="register-message" style="display: none; margin-top: 10px; color: red;"></div>
+        </form>
+    </div>
+
+    <script src="signup.js"></script> 
+</body>
+<script>
+
+    function moveFocus(currentField, nextField) {
+        const currentInput = document.getElementById(currentField);
+        const nextInput = document.getElementById(nextField);
+    
+        
+        if (currentInput.value.length === currentInput.maxLength) {
+            nextInput.focus();
+        }
+    }
+    
+    document.getElementById('register-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        const firstName = document.getElementById('firstName').value.trim();
+        const lastName = document.getElementById('lastName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const confirmPassword = document.getElementById('confirmPassword').value.trim();
+        const year = document.getElementById('year').value.trim();
+        const month = document.getElementById('month').value.trim();
+        const day = document.getElementById('day').value.trim();
+    
+        const registerMessage = document.getElementById('register-message');
+    
+        registerMessage.style.display = 'none';
+    
+        if (password !== confirmPassword) {
+            registerMessage.innerText = 'Passwords do not match.';
+            registerMessage.style.display = 'block';
+            return;
+        }
+    
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        const existingUser = users.find(user => user.email === email);
+        if (existingUser) {
+            registerMessage.innerText = 'User with this email already exists.';
+            registerMessage.style.display = 'block';
+            return;
+        }
+    
+        if (!year || !month || !day) {
+            registerMessage.innerText = 'Please enter a valid birthdate.';
+            registerMessage.style.display = 'block';
+            return;
+        }
+    
+        const birthdate = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+        const newUser = { firstName, lastName, email, password, birthdate };
+        users.push(newUser);
+        localStorage.setItem('users', JSON.stringify(users));
+    
+        window.location.href = 'index.html';
+    });
+    </script>
+</html>

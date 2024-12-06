@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitors - Mega Tech</title>
+    <link rel="stylesheet" href="ecran.css">
+</head>
+<body>
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        
+            <div class="slide-menu" id="slide-menu">
+                <button class="cancel-btn" id="cancel-btn">X</button>
+        
+                <a href="ordinateur.html" class="menu-btn"><i>Ordinateur</i></a>
+                <a href="laptop.html" class="menu-btn"><i>Laptop</i></a>
+                <a href="ecran.html" class="menu-btn"><i>Ecrans</i></a>
+                <a href="composants.html" class="menu-btn"><i>Composants</i></a>
+            </div>
+        
+            <script>
+                document.getElementById('hamburger-menu').addEventListener('click', function() {
+                    document.getElementById('slide-menu').classList.toggle('open');
+                });
+        
+                document.getElementById('cancel-btn').addEventListener('click', function() {
+                    document.getElementById('slide-menu').classList.remove('open');
+                });
+            </script>
+        
+        
+        
+    <div class="container">
+        <h1 class="title">Mega Tech</h1>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" onclick="showProductDetails('Samsung Odyssey G7', 'QHD (2560 x 1440)', '144Hz', '1ms', '27 inches', 'Samsung', '499 DT')">
+                <div class="badge">New</div>
+                <img src="https://m.media-amazon.com/images/I/713uNpSBwqL._AC_UY218_.jpg"LG UltraGear Monitor" class="product-image">
+                <h2 class="product-name">LG UltraGear 27GN950 | 27 inch | 4K UHD | 144Hz</h2>
+                <p class="product-price1">899 DT</p>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card" onclick="showProductDetails('ASUS TUF Gaming VG27AQ', 'WQHD (2560 x 1440)', '165Hz', '1ms', '27 inches', 'ASUS', '399 DT')">
+                <div class="badge">New</div>
+                <img src="https://m.media-amazon.com/images/I/51IkCwK7+6L._AC_SY300_SX300_.jpg" class="product-image">
+                <h2 class="product-name">ASUS TUF Gaming VG27AQ | 27 inch | WQHD | 165Hz</h2>
+                <p class="product-price1">999 DT</p>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card" onclick="showProductDetails('Dell Alienware AW2521H', 'FHD (1920 x 1080)', '360Hz', '1ms', '24.5 inches', 'Dell', '599 DT')">
+                <div class="badge">New</div>
+                <img src="https://m.media-amazon.com/images/I/71UO7AD3FCL._AC_UY218_.jpg" alt="Dell Alienware Monitor" class="product-image">
+                <h2 class="product-name">Dell Alienware AW2521H | 24.5 inch | FHD | 360Hz</h2>
+                <p class="product-price1">1199 DT</p>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card" onclick="showProductDetails('BenQ EX3501R', 'UWQHD (3440 x 1440)', '100Hz', '4ms', '35 inches', 'BenQ', '749 DT')">
+                <div class="badge">New</div>
+                <img src="https://m.media-amazon.com/images/I/816y1N1QTQL._AC_UY218_.jpg" alt="BenQ EX3501R Monitor" class="product-image">
+                <h2 class="product-name">BenQ EX3501R | 35 inch | UWQHD | 100Hz</h2>
+                <p class="product-price1">1400 DT</p>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card" onclick="showProductDetails('Acer Predator X34', 'UWQHD (3440 x 1440)', '120Hz', '4ms', '34 inches', 'Acer', '999 DT')">
+                <div class="badge">New</div>
+                <img src="https://m.media-amazon.com/images/I/713vGj6KevL._AC_UY218_.jpg" alt="Acer Predator X34 Monitor" class="product-image">
+                <h2 class="product-name">Acer Predator X34 | 34 inch | UWQHD | 120Hz</h2>
+                <p class="product-price1">1450 DT</p>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-card" onclick="showProductDetails('ViewSonic XG270QG', 'QHD (2560 x 1440)', '165Hz', '1ms', '27 inches', 'ViewSonic', '499 DT')">
+                <div class="badge">New</div>
+                <img src="https://m.media-amazon.com/images/I/71pduRcUuSL._AC_UY218_.jpg" alt="ViewSonic XG270QG Monitor" class="product-image">
+                <h2 class="product-name">ViewSonic XG270QG | 27 inch | QHD | 165Hz</h2>
+                <p class="product-price1">1498 DT</p>
+            </div>
+            <!-- Product 8 -->
+            <div class="product-card" onclick="showProductDetails('Gigabyte G32QC', 'QHD (2560 x 1440)', '165Hz', '1ms', '32 inches', 'Gigabyte', '399 DT')">
+                <div class="badge">New</div>
+                <img src="https://m.media-amazon.com/images/I/6154McE3CyL._AC_UY218_.jpg" alt="Gigabyte G32QC Monitor" class="product-image">
+                <h2 class="product-name">Gigabyte G32QC | 32 inch | QHD | 165Hz</h2>
+                <p class="product-price1">1550 DT</p>
+            </div>
+        </div>
+
+        <div id="product-detail" class="product-detail" style="display: none;">
+            <button class="close-btn" onclick="closeProductDetails()"><i>X</i></button>
+            <h2 id="product-title"></h2>
+            <p id="product-specs"></p>
+            <p id="product-price"></p>
+            
+            <button class="command-btn" onclick="orderProduct()"><i>Commander</i></button>
+        </div>
+    </div>
+
+    <script> 
+        function showProductDetails(name, resolution, refreshRate, responseTime, size, brand, price) {
+            document.getElementById('product-title').textContent = name;
+            document.getElementById('product-specs').innerHTML = ` 
+                <p><strong>Resolution:</strong> ${resolution}</p>
+                <p><strong>Refresh Rate:</strong> ${refreshRate}</p>
+                <p><strong>Response Time:</strong> ${responseTime}</p>
+                <p><strong>Size:</strong> ${size}</p>
+                <p><strong>Brand:</strong> ${brand}</p>
+            `;
+            document.getElementById('product-price').textContent = `Prix: ${price}`;
+            
+            document.getElementById('product-detail').style.display = 'block';
+        }
+
+        const commandBtn = document.querySelector('.command-btn');
+
+        commandBtn.addEventListener('click', function() {
+            window.location.href = 'identity.html';
+        });
+
+        function closeProductDetails() {
+            document.getElementById('product-detail').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+.logout-btn:hover {
+    background-color: #000000;
+}
+
+.settings-btn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%; 
+    padding: 15px; 
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 100px;
+}
+
+.settings-btn img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.settings-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    background-color: #0056b3; 
+}
+
+.settings-btn:hover img {
+    transform: rotate(45deg);
+}
+
+.settings-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}     
+
+
+
+                              /* New Code */ 
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 1px;
+    margin-left: 10px;
+}
+
+.dropdown-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.dropdown-btn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    background-color: white;
+    color: black;
+    padding: 12px 16px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+body{ background-image: url(img1.jpg);
+    
+    background-position: center;
+    background-attachment: fixed;
+    border: 20px dashed rgb(0, 17, 255) rgb(rgb(255, 0, 0), rgb(0, 255, 0), blue);
+}
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px; 
+    height: 30px; 
+    margin-top: -99px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; 
+}
+.hamburger-menu :hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    background-color: #0056b3; 
+}
+
+
+.hamburger-menu .line {
+    width: 30px; 
+    height: 5px; 
+    background-color: #ffffff; 
+    border-radius: 5px; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 350px; 
+    height: 100%;
+    background-color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: left 0.3s ease-in-out;
+}
+
+.slide-menu.open {
+    left: 0; 
+}
+
+
+.cancel-btn {
+    background: none;
+    color: black; 
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: bold;
+}
+
+.cancel-btn:hover {
+    color: rgb(0, 0, 0);
+  
+}
+
+.slide-menu .menu-btn {
+    margin-top: 20%;
+}
+
+
+
+.menu-btn {
+    color: black; 
+    background: none; 
+    border: none;
+    padding: 5px 20px; 
+    width: 100%;
+    text-align: left;
+    font-size: 14px; 
+    cursor: pointer;
+    margin: 5px 0px; 
+    text-decoration: none;
+}
+
+.menu-btn:hover {
+    background: none;
+    color: black; 
+}
+
+.top-right-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.settings-btn {
+    background-color: #ffffff; 
+    border: none;
+    border-radius: 50%; 
+    padding: 15px; 
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+}
+
+.settings-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.settings-btn:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    background-color: #0056b3; 
+}
+
+
+.settings-btn:hover img {
+    transform: rotate(45deg);
+}
+
+
+.settings-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}

@@ -1,0 +1,140 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 150px;  
+    height: 150px; 
+    border-radius: 80px;  
+    object-fit: cover;  
+    margin-right: 20px;  
+}
+
+.settings-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="file"] {
+    display: none; 
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0004ff;
+}
+
+.name-container, .password-container {
+    margin-bottom: 20px;
+}
+
+.forgot-password-btn {
+    background-color: #0011ff;
+    font-size: 16px;
+}
+
+.forgot-password-btn:hover {
+    background-color: #0011ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.back-btn {
+    background-color: #000000; 
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 12px 20px;
+    border-radius: 70px; 
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px; 
+    left: 20px; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
+    z-index: 10; 
+}
+
+.back-btn:hover {
+    background-color: #001aff; 
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.back-btn:active {
+    transform: translateY(2px); 
+}
+
+.back-arrow {
+    font-weight: bold;
+    font-size: 36px; 
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover .back-arrow {
+    transform: rotate(-10deg); 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-btn {
+    animation: fadeIn 0.5s ease-out;
+}
